@@ -1,0 +1,16 @@
+<div>
+  <form (submit)="createQuote()">
+    <div>
+      <label>Add a Quote</label>
+    </div>
+    <div>
+      <textarea name="quote" [(ngModel)]="newQuote.quote" required minlength="3" #quote="ngModel"></textarea>
+      <p [ngStyle]="{'color': 'red'}" 
+      *ngIf="quote.errors && quote.errors.required && quote.touched">A quote must contain at least three characters!</p>
+    </div>
+    <div>
+      Author<input type="text" name="author" [(ngModel)]="newQuote.author">
+    </div>
+    <input type="submit" value="Submit">
+  </form>
+</div>

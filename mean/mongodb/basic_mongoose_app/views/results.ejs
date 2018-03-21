@@ -1,0 +1,22 @@
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>email</th>
+            <th>Age</th>
+        </tr>
+        <% for(let user of users) { %>
+            <tr>
+                <td><%= user.name %></td>
+                <td><%= user.email %></td>
+                <td><%= user.age %></td>               
+            </tr>
+        <%  } %>   
+    </table>
+</body>
+</html>

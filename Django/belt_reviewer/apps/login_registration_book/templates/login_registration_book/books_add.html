@@ -1,0 +1,29 @@
+<h1>Add a new Book Title and a Review</h1>
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+        <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+<form action="/books/add" method ='POST'>
+{% csrf_token %}
+Book Title: <input type="text" name = 'title'>
+Author: <input type="text" name = 'author'>
+
+or Select Author
+<select name="select_author" >
+    <option value = "authors">{{author.name}}</option>
+</select>
+
+    
+Review:<input type="textarea" name = "review">
+Rating:<select name = "stars" name = 'rating'>
+    <option value="integers">5</option>
+    <option value="integers">4</option>
+    <option value="integers">3</option>
+    <option value="integers">2</option>
+    <option value="integers">1</option>
+</select> stars
+</form>
+<input type="submit" value = "Add Book and Review">

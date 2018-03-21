@@ -1,0 +1,8 @@
+C:\Users\Priti\Documents\dojo_assignments\c#2\fundamentalsI\bin\Debug\netcoreapp1.1\fundamentalsI.deps.json
+C:\Users\Priti\Documents\dojo_assignments\c#2\fundamentalsI\bin\Debug\netcoreapp1.1\fundamentalsI.runtimeconfig.json
+C:\Users\Priti\Documents\dojo_assignments\c#2\fundamentalsI\bin\Debug\netcoreapp1.1\fundamentalsI.runtimeconfig.dev.json
+C:\Users\Priti\Documents\dojo_assignments\c#2\fundamentalsI\bin\Debug\netcoreapp1.1\fundamentalsI.dll
+C:\Users\Priti\Documents\dojo_assignments\c#2\fundamentalsI\bin\Debug\netcoreapp1.1\fundamentalsI.pdb
+C:\Users\Priti\Documents\dojo_assignments\c#2\fundamentalsI\obj\Debug\netcoreapp1.1\fundamentalsI.AssemblyInfo.cs
+C:\Users\Priti\Documents\dojo_assignments\c#2\fundamentalsI\obj\Debug\netcoreapp1.1\fundamentalsI.dll
+C:\Users\Priti\Documents\dojo_assignments\c#2\fundamentalsI\obj\Debug\netcoreapp1.1\fundamentalsI.pdb

@@ -1,0 +1,8 @@
+C:\Users\Priti\Documents\dojo_assignments\c#2\wizzardNinjaSamurai\bin\Debug\netcoreapp1.1\wizzardNinjaSamurai.deps.json
+C:\Users\Priti\Documents\dojo_assignments\c#2\wizzardNinjaSamurai\bin\Debug\netcoreapp1.1\wizzardNinjaSamurai.runtimeconfig.json
+C:\Users\Priti\Documents\dojo_assignments\c#2\wizzardNinjaSamurai\bin\Debug\netcoreapp1.1\wizzardNinjaSamurai.runtimeconfig.dev.json
+C:\Users\Priti\Documents\dojo_assignments\c#2\wizzardNinjaSamurai\bin\Debug\netcoreapp1.1\wizzardNinjaSamurai.dll
+C:\Users\Priti\Documents\dojo_assignments\c#2\wizzardNinjaSamurai\bin\Debug\netcoreapp1.1\wizzardNinjaSamurai.pdb
+C:\Users\Priti\Documents\dojo_assignments\c#2\wizzardNinjaSamurai\obj\Debug\netcoreapp1.1\wizzardNinjaSamurai.AssemblyInfo.cs
+C:\Users\Priti\Documents\dojo_assignments\c#2\wizzardNinjaSamurai\obj\Debug\netcoreapp1.1\wizzardNinjaSamurai.dll
+C:\Users\Priti\Documents\dojo_assignments\c#2\wizzardNinjaSamurai\obj\Debug\netcoreapp1.1\wizzardNinjaSamurai.pdb

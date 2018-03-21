@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        {% load staticfiles %}
+        <link rel="stylesheet" href="{% static 'users/style.css' %}">
+    </head>
+<body>
+<h1>Registration</h1>
+{% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+        {% endfor %}
+    </ul>
+{% endif %}
+<form action="/register" method='post'> 
+    {% csrf_token %}
+    <ul>
+        First Name:<input type="text" name = "first_name">
+        Last Name:<input type="text" name = "last_name"> 
+        Email: <input type="text" name= "email">
+        Password: <input type="password" name="password">
+        Confirm Pw: <input type="password" name="password_confirm">
+        <input type="submit" value="Register"> 
+    </ul>
+</form> 
+<h1>Login</h1>
+
+<form action="/login" method='post'> 
+    {% csrf_token %}
+    <ul>
+        Email: <input type="text" name= "email">
+        Password: <input type="password" name="password">
+        <input type="submit" value="Login"> 
+    </ul>
+</form> 

@@ -1,0 +1,78 @@
+<h1>Add a new course</h1>
+{% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+        {% endfor %}
+    </ul>
+{% endif %}
+<form action="{% url 'courses:add' %}" method='POST'> 
+    {% csrf_token %}
+    <ul>
+        Name: <input type="text" name= "course_name">
+        Description: <input type="textarea" name="description">
+        <input type="submit" value="Add"> 
+    </ul>
+</form> 
+<h1>courses</h1>
+<h2>welcome {{user.first_name}}</h2>
+<table> 
+    <thead>
+        <tr>
+            <th>Course Name</th>
+            <th>Description</th>
+            <th>Date Added</th>
+            <th>Made By</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+       
+        {% for course in other_courses %}
+            <tr>
+                <td>{{ course.course_name }}</td>
+                <td>{{ course.description}}</td>
+                <td> {{ course.created_at }}</td>
+                <td>{{course.course_created_by.first_name}}</td>
+                {% if user.id == course.course_created_by.id %}
+                <td><a href="/courses/destroy/{{ course.id }}">delete</a></td>
+                <td><a href="{% url 'courses:show' course.id %}">show</a></td>
+                <td><a href="{% url 'courses:like' course.id %}">add to favorites</a></td>
+                {% else %}
+                <td><a href="{% url 'courses:show' course.id %}">show</a></td>
+                <td><a href="{% url 'courses:like' course.id %}">add to favorites</a></td>
+               {% endif %}
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<table> 
+    <thead>
+        <tr>
+            <th>Course Name</th>
+            <th>Description</th>
+            <th>Date Added</th>
+            <th>Made By</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+<h1>favorites</h1>
+        {% for course in courses_liked %}
+            <tr>
+                <td>{{ course.course_name }}</td>
+                <td>{{ course.description}}</td>
+                <td> {{ course.created_at }}</td>
+                <td>{{course.course_created_by.first_name}}</td>
+                {% if user.id == course.course_created_by.id %}
+                <td><a href="/courses/destroy/{{ course.id }}">delete</a></td>
+                <td><a href="{% url 'courses:show' course.id %}">show</a></td>
+                <td><a href="{% url 'courses:unlike' course.id %}">remove from favorites</a></td>
+                {% else %}
+                <td><a href="{% url 'courses:show' course.id %}">show</a></td>
+                <td><a href="{% url 'courses:unlike' course.id %}">remove from favorites</a></td>
+                {% endif %}
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>

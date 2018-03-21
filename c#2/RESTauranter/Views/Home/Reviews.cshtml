@@ -1,0 +1,18 @@
+@model  RESTauranter.Models.Reviews;
+
+<div class="container">
+    <div class='row'>
+        <div class='col-sm-5 forms'>
+        
+           @foreach(var review in ViewBag.Reviews)
+            {
+                <p>Review for: @review.RestaurantName -- @review.Stars star(s)</p>
+                <p>Reviewer: @review.ReviewerName</p>
+                <p>@review.Review</p>
+
+                
+            }
+           
+        </div>    
+    </div>
+</div>

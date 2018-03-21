@@ -1,0 +1,46 @@
+<html>
+<body>
+    
+    <script>
+        // part 1
+        // function starString(num){
+        //     var stars = "";
+        //     for(var i = 0; i<num; i++){
+        //       stars += "*";                
+        //     }
+        // console.log(stars);
+            
+        // }
+        // starString(5);
+        
+        // part 2
+        function drawstars(arr){
+            var stars = "*";
+            for(var i = 0; i<arr.length; i++){
+            
+               console.log(stars.repeat(arr[i])); 
+              
+            }
+            
+        }
+        drawstars([7, 5, 3, 2, 4]);
+
+        // part 3
+        // function drawstars(arr){
+        //     var stars = "*";
+        //     var str = ""
+        //     for(var i = 0; i<arr.length; i++){
+        //        if(typeof arr[i]=='string'){
+                
+        //            console.log(arr[i][0].repeat(arr[i].length).toLowerCase());
+        //        }
+        //        else{
+        //            console.log(stars.repeat(arr[i]));      
+        //        }
+        //     }   
+        // }
+        // drawstars([4, "Tom", 1, "Michael", 5, 7, "Jimmy Smith"]);
+    </script>
+   
+</body>
+</html>

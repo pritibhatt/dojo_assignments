@@ -1,0 +1,27 @@
+
+
+<button [routerLink]="['/new']">New Restaurant </button>
+
+
+<table border="1" style="width: 300px">  
+  <thead>  
+      <th>Restaurant</th> 
+      <th>Cuisine</th>
+      
+      <th>Actions Available</th> 
+      
+      
+  </thead>  
+  <tr  *ngFor="let product of products">  
+      <td>  <h3>{{product.restaurant}}</h3> </td> 
+      <td>{{product.cuisine}}</td> 
+     
+      <td>
+        <p>
+        <input type="submit"  class="btn btn-primary" [routerLink]="['/reviews/' + product._id]" value="Read reviews"/>
+        <input type="submit"  class="btn btn-primary" [routerLink]="['/edit/' + product._id]" value="Update"/>
+        <button class="btn btn-primary" (click)="destroyProduct(product)">Delete</button>
+        </p>
+    </td>    
+  </tr>  
+</table>  

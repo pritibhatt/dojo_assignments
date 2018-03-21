@@ -1,0 +1,19 @@
+<h1>Are you sure you want to delete the following courses</h1>
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+        <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+    <!-- new_courses is what i called in the query under delete -->
+    <p>name: {{new_courses.course_name}}</p>
+    <p>description: {{new_courses.description}}</p>
+    <a href="/">No</a>
+<form action="/courses/delete_course/{{new_courses.id }}" method='post'> 
+    {% csrf_token %}
+    <ul>
+      <input type="submit" name = "yes" value ="Yes! I want to delete" >
+       
+    </ul>
+</form> 

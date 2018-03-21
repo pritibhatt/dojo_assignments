@@ -1,0 +1,10 @@
+
+<form action="/addmsg" method = "POST">
+    Post:<input type="text" name = "postmsg">
+    <input type="submit" value = "Add">
+</form>
+<h3>All Posts</h3>
+{% for post in all_posts %}
+    <p>{{post['post']}}</p><br>
+    <p>Created by: {{post['first_name']}} &nbsp {{post['last_name']}} &nbsp created at:{{post['created_at']}}</p>'
+{% endfor %}

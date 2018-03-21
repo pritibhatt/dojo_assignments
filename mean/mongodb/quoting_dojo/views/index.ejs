@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <title>Quoting Dojo</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    
+</head>
+<body>
+   
+    <div>
+        <h2>Welcome to Quoting Dojo</h2>
+        <% if(typeof(errors) != 'undefined' ) { %>
+            <% for (var x in errors) { %>
+             <h3><%= errors[x].message %></h3>
+            <% } %>
+        <% } %>
+       
+            
+        <form action="/quotes" method="post">
+            <div>
+                <label for="text">Your Name:</label>
+                <input type="text" name="name">
+            </div>
+            <div>
+                <label for="textarea">Your quote:</label>
+                <input type="textarea" name="quote">
+            </div>
+    
+            <input type="submit" name="Add my quote!">
+        </form>
+        <a href="/quotes"><button>Skip to quotes</button></a> 
+        
+    </div>
+</body>
+</html>
+

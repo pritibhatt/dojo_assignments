@@ -1,0 +1,10 @@
+C:\Users\Priti\Documents\dojo_assignments\c#2\randomPasscode\bin\Debug\netcoreapp2.0\randomPasscode.deps.json
+C:\Users\Priti\Documents\dojo_assignments\c#2\randomPasscode\bin\Debug\netcoreapp2.0\randomPasscode.runtimeconfig.json
+C:\Users\Priti\Documents\dojo_assignments\c#2\randomPasscode\bin\Debug\netcoreapp2.0\randomPasscode.runtimeconfig.dev.json
+C:\Users\Priti\Documents\dojo_assignments\c#2\randomPasscode\bin\Debug\netcoreapp2.0\randomPasscode.dll
+C:\Users\Priti\Documents\dojo_assignments\c#2\randomPasscode\bin\Debug\netcoreapp2.0\randomPasscode.pdb
+C:\Users\Priti\Documents\dojo_assignments\c#2\randomPasscode\obj\Debug\netcoreapp2.0\randomPasscode.csproj.CoreCompileInputs.cache
+C:\Users\Priti\Documents\dojo_assignments\c#2\randomPasscode\obj\Debug\netcoreapp2.0\randomPasscode.AssemblyInfoInputs.cache
+C:\Users\Priti\Documents\dojo_assignments\c#2\randomPasscode\obj\Debug\netcoreapp2.0\randomPasscode.AssemblyInfo.cs
+C:\Users\Priti\Documents\dojo_assignments\c#2\randomPasscode\obj\Debug\netcoreapp2.0\randomPasscode.dll
+C:\Users\Priti\Documents\dojo_assignments\c#2\randomPasscode\obj\Debug\netcoreapp2.0\randomPasscode.pdb

@@ -1,0 +1,10 @@
+C:\Users\Priti\Documents\dojo_assignments\c#2\dojoDachi\bin\Debug\netcoreapp2.0\dojoDachi.deps.json
+C:\Users\Priti\Documents\dojo_assignments\c#2\dojoDachi\bin\Debug\netcoreapp2.0\dojoDachi.runtimeconfig.json
+C:\Users\Priti\Documents\dojo_assignments\c#2\dojoDachi\bin\Debug\netcoreapp2.0\dojoDachi.runtimeconfig.dev.json
+C:\Users\Priti\Documents\dojo_assignments\c#2\dojoDachi\bin\Debug\netcoreapp2.0\dojoDachi.dll
+C:\Users\Priti\Documents\dojo_assignments\c#2\dojoDachi\bin\Debug\netcoreapp2.0\dojoDachi.pdb
+C:\Users\Priti\Documents\dojo_assignments\c#2\dojoDachi\obj\Debug\netcoreapp2.0\dojoDachi.csproj.CoreCompileInputs.cache
+C:\Users\Priti\Documents\dojo_assignments\c#2\dojoDachi\obj\Debug\netcoreapp2.0\dojoDachi.AssemblyInfoInputs.cache
+C:\Users\Priti\Documents\dojo_assignments\c#2\dojoDachi\obj\Debug\netcoreapp2.0\dojoDachi.AssemblyInfo.cs
+C:\Users\Priti\Documents\dojo_assignments\c#2\dojoDachi\obj\Debug\netcoreapp2.0\dojoDachi.dll
+C:\Users\Priti\Documents\dojo_assignments\c#2\dojoDachi\obj\Debug\netcoreapp2.0\dojoDachi.pdb

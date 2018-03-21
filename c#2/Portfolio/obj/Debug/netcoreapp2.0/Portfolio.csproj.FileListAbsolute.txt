@@ -1,0 +1,10 @@
+C:\Users\Priti\Documents\dojo_assignments\c#2\Portfolio\bin\Debug\netcoreapp2.0\Portfolio.deps.json
+C:\Users\Priti\Documents\dojo_assignments\c#2\Portfolio\bin\Debug\netcoreapp2.0\Portfolio.runtimeconfig.json
+C:\Users\Priti\Documents\dojo_assignments\c#2\Portfolio\bin\Debug\netcoreapp2.0\Portfolio.runtimeconfig.dev.json
+C:\Users\Priti\Documents\dojo_assignments\c#2\Portfolio\bin\Debug\netcoreapp2.0\Portfolio.dll
+C:\Users\Priti\Documents\dojo_assignments\c#2\Portfolio\bin\Debug\netcoreapp2.0\Portfolio.pdb
+C:\Users\Priti\Documents\dojo_assignments\c#2\Portfolio\obj\Debug\netcoreapp2.0\Portfolio.csproj.CoreCompileInputs.cache
+C:\Users\Priti\Documents\dojo_assignments\c#2\Portfolio\obj\Debug\netcoreapp2.0\Portfolio.AssemblyInfoInputs.cache
+C:\Users\Priti\Documents\dojo_assignments\c#2\Portfolio\obj\Debug\netcoreapp2.0\Portfolio.AssemblyInfo.cs
+C:\Users\Priti\Documents\dojo_assignments\c#2\Portfolio\obj\Debug\netcoreapp2.0\Portfolio.dll
+C:\Users\Priti\Documents\dojo_assignments\c#2\Portfolio\obj\Debug\netcoreapp2.0\Portfolio.pdb

@@ -1,0 +1,7 @@
+        <p>"The email address you entered {{email}} is VALID email address! Thank you!"</p>
+        <h3>Emails entered are:</h3>
+        {% for email in all_emails: %}
+        <p>email: {{ email['email'] }} &nbsp&nbsp {{ email['created_at'] }}</p>
+              
+        <hr>
+        {% endfor %} 

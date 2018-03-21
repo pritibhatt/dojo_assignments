@@ -1,0 +1,6 @@
+<h1>{{course.course_name}}</h1>
+<ul>
+    {% for user in course.favorite_courses.all %}
+    <li>{{user.first_name}}</li>
+    {% endfor %}
+</ul>

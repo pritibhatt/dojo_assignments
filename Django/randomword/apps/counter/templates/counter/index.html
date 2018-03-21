@@ -1,0 +1,9 @@
+<h3>Random word attempt (attempt #{{request.session.counter}}) </h3>
+<form action="/random_word">
+    <input type="submit" value = "generate">
+</form>
+<form action="/random_word/reset" method = 'post'>
+    {% csrf_token %}
+    <input type="text" name="word_box" placeholder= "{{request.session.unique_id}}">
+    <input type="submit" name="reset" value = 'reset'>
+</form>

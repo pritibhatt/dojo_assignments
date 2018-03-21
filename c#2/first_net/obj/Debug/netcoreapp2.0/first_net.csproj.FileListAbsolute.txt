@@ -1,0 +1,10 @@
+C:\Users\Priti\Documents\dojo_assignments\c#2\first_net\bin\Debug\netcoreapp2.0\first_net.deps.json
+C:\Users\Priti\Documents\dojo_assignments\c#2\first_net\bin\Debug\netcoreapp2.0\first_net.runtimeconfig.json
+C:\Users\Priti\Documents\dojo_assignments\c#2\first_net\bin\Debug\netcoreapp2.0\first_net.runtimeconfig.dev.json
+C:\Users\Priti\Documents\dojo_assignments\c#2\first_net\bin\Debug\netcoreapp2.0\first_net.dll
+C:\Users\Priti\Documents\dojo_assignments\c#2\first_net\bin\Debug\netcoreapp2.0\first_net.pdb
+C:\Users\Priti\Documents\dojo_assignments\c#2\first_net\obj\Debug\netcoreapp2.0\first_net.csproj.CoreCompileInputs.cache
+C:\Users\Priti\Documents\dojo_assignments\c#2\first_net\obj\Debug\netcoreapp2.0\first_net.AssemblyInfoInputs.cache
+C:\Users\Priti\Documents\dojo_assignments\c#2\first_net\obj\Debug\netcoreapp2.0\first_net.AssemblyInfo.cs
+C:\Users\Priti\Documents\dojo_assignments\c#2\first_net\obj\Debug\netcoreapp2.0\first_net.dll
+C:\Users\Priti\Documents\dojo_assignments\c#2\first_net\obj\Debug\netcoreapp2.0\first_net.pdb

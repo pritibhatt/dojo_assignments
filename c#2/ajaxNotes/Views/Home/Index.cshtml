@@ -1,0 +1,23 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+<h1>Default Blank Page~</h1>
+<p>Get to adding stuff</p><div>
+<body>
+<div class="container">  
+<h1>Welcome to QuotingDojo</h1>
+    <div class='row'>
+        <div class='col-sm-5 forms'>
+            <form action="addnotes" method="post">                
+                Title:<input type="text"  name="title" class="form-control"/>  
+                Notes:<input type="textarea" name = "notes" class="form-control"/><br/>
+                <div class='form-group'>
+                <button type="submit">Add Note</button>
+                </div>                       
+            </form>
+            <a href="/edit"><button>Edit</button></a>             
+            <a href="/delete"><button>Delete</button></a> 
+            
+        </div>
+    </div>
+</div>

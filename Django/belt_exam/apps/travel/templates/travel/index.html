@@ -1,0 +1,63 @@
+<h2>Hello, {{user.first_name}}</h2>
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+        <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+<h3>Your Trip Schedules</h3>
+<table> 
+    <thead>
+        <tr>
+            <th>Destination</th>
+            <th>Travel Start Date</th>
+            <th>Travel End Date</th>
+            <th>Plan</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for travel in travels_joined %}
+            <tr>
+                <td><a href="{% url 'travels:show' travel.id %}">{{ travel.destnation}}</a></td>
+                <!-- <td>{{ travel.destnation}}</td> -->
+                <td>{{ travel.travel_start_date}}</td>
+                <td> {{ travel.travel_end_date}}</td>
+                <td>{{ travel.plan }} </td>
+                <td><a href="{% url 'travels:unjoin' travel.id %}">remove from join</a></td>
+                
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<h3>Other Users Travel Plans</h3>
+<table> 
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Destination</th>
+            <th>Travel Start Date</th>
+            <th>Travel End Date</th>
+            <th>Do you want to join?</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for travel in other_travels %}
+            <tr>
+                <td>{{travel.travel_created_by.first_name}}</td> 
+                <td><a href="{% url 'travels:show' travel.id %}">{{ travel.destnation}}</a></td>
+                <td>{{ travel.travel_start_date}}</td>
+                <td> {{ travel.travel_end_date}}</td>
+                <td><a href="{% url 'travels:join' travel.id %}">join</a></td>
+                <td><a href="{% url 'travels:delete' travel.id %}">delete</a></td>
+                
+            </td>
+              
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<a href="{% url 'travels:add' %}">Add Travel Plan</a></td>
+<a href="/">Logout</a>
+

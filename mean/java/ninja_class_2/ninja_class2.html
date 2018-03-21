@@ -1,0 +1,53 @@
+<html>
+<body>
+    <script>
+        function Ninja(name){
+            this.name = name;
+            this.health = 100;
+            this.privateSpeed = 3;
+            this.privateStrength = 3;
+        
+            this.sayName = function(){
+                console.log("My ninja name is " + this.name);
+            }
+            this.showStats = function(){
+                console.log("Name: " + this.name + " " + "Health: " + this.health  + " " +"Speed: " + this.privateSpeed + " " + "Strength: " + this.privateStrength);
+            }   
+            this.drinkSake = function(){
+                this.health+=10;
+                console.log("health is now: " + this.health)
+            }
+            this.punch = function(otherninja){
+               if(otherninja instanceof Ninja){
+                otherninja.health-=5;
+                console.log(otherninja.name + " was punched by " + this.name + " " + "and lost 5 Health!");
+               }
+            //    else{
+            //        console.log("Not ninja");
+            //    }
+            }
+            this.kick = function(otherninja){
+                if(otherninja instanceof Ninja){
+                otherninja.health-=(15*otherninja.privateStrength);
+                console.log(otherninja.name + " was kicked by " + this.name + " " + "and lost " + otherninja.health + " Health!");
+                }
+            //     else{const ninja1 = new Ninja("Priti");
+            //        console.log("Not ninja");
+            //    }
+            }
+        }
+
+        
+        const ninja2 = new Ninja("Dave");
+        const ninja3 = "hi";
+        // ninja1.sayName();
+        // ninja1.showStats();
+        // ninja1.drinkSake();
+        // ninja1.punch(ninja3);
+        
+        ninja1.kick(ninja2);
+    
+        
+    </script>   
+</body>
+</html>

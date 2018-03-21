@@ -1,0 +1,24 @@
+<h4>Edit Restaurant</h4>
+<a [routerLink]="['/']">Home</a>
+<div  class="from-group">
+  <form  (submit)="onSubmitEdit()">
+    <!-- call name as something else other than ngmodel name -->
+    <input type="hidden" name="id" [(ngModel)]="updatedProduct.product._id"  >
+    <div>
+      Restaurant name:<input type="text" name="restaurant" [(ngModel)]="updatedProduct.product.restaurant" #restaurant="ngModel" > 
+      <p [ngStyle]="{'color': 'red'}" 
+      *ngIf="restaurant.errors && restaurant.errors.required && restaurant.touched">Restaurant name must contain at least three characters!</p>
+    </div>
+
+    <div>
+      Cuisine type:<input type="text" name="cuisine" [(ngModel)]="updatedProduct.product.cuisine" #cuisine="ngModel"  > 
+      <p [ngStyle]="{'color': 'red'}" 
+      *ngIf="cuisine.errors && cuisine.errors.required && cuisine.touched">cuisine must contain at least three characters!</p>
+    </div>
+    
+   
+    <input type="submit" class="btn btn-primary" value="Submit" />
+    <input type="button" [routerLink]="['']" class="btn btn-primary" value="Reset" />
+     
+  </form>
+</div>

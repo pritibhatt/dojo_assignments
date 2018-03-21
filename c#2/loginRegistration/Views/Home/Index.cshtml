@@ -1,0 +1,37 @@
+@model loginRegistration.Models.User
+
+  <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <div>
+                
+                </div>
+                <h2>Register</h2>
+                <form asp-controller="Home" asp-action="Register" method="post">
+                    <div class="form-group">
+                        <span asp-validation-for="FirstName"></span>
+                        <input  class="form-control" asp-for="FirstName" placeholder="First Name"/>
+                    </div>
+                    <div class="form-group">
+                        <span asp-validation-for="LastName"></span>
+                        <input class="form-control" asp-for="LastName" placeholder="Last Name"/>
+                    </div>
+                    <div class="form-group">
+                        <span asp-validation-for="Email"></span>
+                        <input  class="form-control" asp-for="Email" placeholder="Email"/>
+                    </div>
+                    <div class="form-group">
+                        <span asp-validation-for="Password"></span>
+                        <input  class="form-control"  asp-for="Password" placeholder="Password"/>
+                    </div>
+                    <div class="form-group">
+                         <span asp-validation-for="Confirm"></span>
+                        <input name="confirm" class="form-control" asp-for="Confirm" placeholder="Confirm Password"/>
+                    </div>
+       
+                    <button type="submit" class="btn btn-default">Register</button><br><br>
+                </form>
+                <a href="/login"><button type="submit" class="btn btn-default">If registerd Login</button></a>
+            </div>
+    </div>
+    

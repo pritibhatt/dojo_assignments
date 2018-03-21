@@ -1,0 +1,37 @@
+@model  RESTauranter.Models.Reviews;
+
+<div class="container">  
+<h2>Write a Review</h2>
+    <div class='row'>
+        <div class='col-sm-5 forms'>
+            <form asp-controller="Home" asp-action="createReview" method="post">
+                  <div class="form-group">
+                    <span asp-validation-for="ReviewerName"></span>
+                    <input  class="form-control" asp-for="ReviewerName" placeholder="Reviewer Name"/>
+                </div>             
+                <div class="form-group">
+                   <span asp-validation-for="RestaurantName"></span>
+                   <input  class="form-control" asp-for="RestaurantName" placeholder="Restaurant Name"/>
+                </div> 
+                <div class="form-group">
+                   <span asp-validation-for="Review"></span>
+                   <textarea class="form-control" asp-for="Review" placeholder="Review" minlength="10"></textarea>
+                </div> 
+                <div class="form-group">
+                   <span asp-validation-for="Stars"></span>
+                   Stars:<input  type = "number" class="form-control" asp-for="Stars" min="1", max="5" />
+                </div>
+                
+               <div class="form-group">
+                   <span asp-validation-for="DateofVisit"></span>
+                   Date of Visit:<input type ="date" class="form-control" asp-for="DateofVisit" />
+                </div>  
+               
+                <div class='form-group'>
+                    <button type="submit">Submit</button>
+                </div>                     
+            </form>
+            <a href="/reviews">Reviews</a>
+        </div>
+    </div>
+</div>

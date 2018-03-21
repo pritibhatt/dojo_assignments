@@ -1,0 +1,33 @@
+
+<h1>Users</h1>
+<table>
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>Full Name</th>
+            <th>Email</th>
+            <th>Created At</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+        {% for user in users %}
+            <tr>
+                <td>{{ user.id }}</td>
+                <td>{{ user.first_name }}</td>
+                <td> {{ user.last_name }}</td>
+                <td>{{ user.email }}</td>
+                <td>{{ user.created_at }}</td>
+                <td><a href="/users/{{ user.id }}">Show</a> | <a href="/users/{{ user.id }}/edit">Edit</a> | <a href="/users/{{ user.id }}/destroy">Delete</a></td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<a href="/users/new">Add a new user</a>

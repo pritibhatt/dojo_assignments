@@ -1,0 +1,19 @@
+@{
+    ViewData["Title"] = "Quotes";
+}
+
+<div class="container">
+    <div class='row'>
+        <div class='col-sm-5 forms'>
+            <h2>Here are the awesome quotes!</h2><br/>
+            @foreach(var quote in @ViewBag.allquotes)
+            {
+                <h4>"@quote["quotes"]"</h4>
+                <p>@quote["name"], Created at @quote["created_at"].ToString("D")</p>
+                <hr>
+            }
+           
+        </div>    
+    </div>
+</div>
+</body>

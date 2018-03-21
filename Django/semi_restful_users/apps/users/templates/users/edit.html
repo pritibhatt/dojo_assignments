@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        {% load staticfiles %}
+        <link rel="stylesheet" href="{% static 'users/style.css' %}">
+    </head>
+<body>
+<h1>Edit User {{user.id}}</h1>
+{% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+        {% endfor %}
+    </ul>
+{% endif %}
+<form action="/users/{{ user.id }}/update" method='post'> 
+    {% csrf_token %}
+    <ul>
+        First Name:<input type="text" name = "first_name">
+        Last Name:<input type="text" name = "last_name"> 
+        Email: <input type="text" name= "email">
+        <input type="submit" value="Update"> 
+    </ul>
+</form> 
+<p><a href="/users/{{ user.id }}">Show</a> | <a href="{% url 'my_index' %}">Go Back</a></p>
+</body>
+</html>

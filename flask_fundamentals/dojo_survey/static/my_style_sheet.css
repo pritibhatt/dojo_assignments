@@ -1,0 +1,36 @@
+/* .container{
+    width: 970px;
+    border: 1 px solid black; */
+}
+body{
+    margin-left: 30px;
+    
+}
+.form{
+    width: 300px;
+    margin-left: 10px;
+    padding: 20px;
+    display: inline-block;
+    border: 1px solid black;
+}
+
+
+.dojo_location{
+    margin: 0px;
+   display: inline-block;
+
+}
+.favorite_location{
+   display: block;
+   
+
+}
+.comments{
+    display: block;
+    margin: 0px;
+}
+.survey_btn{
+   display: block;
+   margin-top: 10px;
+   
+}

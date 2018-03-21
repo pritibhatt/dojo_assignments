@@ -1,0 +1,54 @@
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script type ="text/javascript" src="/socket.io/socket.io.js"></script>
+    
+    <script>
+         $(function (){
+            var socket  = io.connect();
+            $('form').submit( () => {
+                let name = $('#name').val();
+                let dojo_location = $('#dojo_location').val();
+                let language = $('#favorite_language').val();
+                let comments = $('#comments').val();
+                let random_number = Math.floor(Math.random() * 1000 + 1);
+                socket.emit('posting_form', {user: name, location: dojo_location, language: language, comments: comments, random_number: random_number})
+                return false; //when there is no route on form
+            })
+            socket.on('updated_message', (data) => {
+                $('#notes').append(`<h3>${data.msg}</h3>`); 
+            })
+           
+        })
+    </script>
+</head>
+<body>
+<div class="container">
+    <div class='row'>
+        <div  class='col-sm-5 forms'> 
+            <div id="notes">
+
+            </div> 
+            <form>
+                <div id="filled_form">
+                    Your Name:<input id="name" type="text"  name="name" class="form-control"/>
+                    Dojo Location:<select id="dojo_location" name = "dojo_location" class="form-control">
+                        <option value="chicago">Chicago</option>
+                        <option value="los_angeles">Los Angeles</option>
+                        <option value="Dallas">Dallas</option>
+                        <option value="Seattle">Seattle</option> 
+                    </select>"favorite_language
+                    Favorite Languages:<select id="favorite_language" name = "favorite_languages" class="form-control">
+                        <option value="c#">C#</option>
+                        <option value="python">Python</option>
+                        <option value="javascript">Javascript</option>
+                        <option value="mean">Mean</option>
+                        </select>
+                    Comment(optional):<input id="comments" type="textarea" name = "comments" class="form-control"/>
+                </div>    
+                <input type="submit" name="submit" value = 'submit'>   
+            </form>
+        </div>
+    </div>
+</div>
+</body>

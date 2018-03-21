@@ -1,0 +1,16 @@
+<html>
+<body>
+    <script>
+        function map(arr, callback){
+            let new_arr = [];
+            for(let i in arr){
+                output.push(callback((arr[i])))
+            }
+        }
+        var result =_map({'first': 1, 'second': 2, 'third':3}, function(num){return num * 3});
+        console.log(result);
+    </script>
+   
+</body>
+</html>
+

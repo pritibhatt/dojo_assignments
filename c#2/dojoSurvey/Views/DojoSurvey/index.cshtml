@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>time display</title>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="~/css/style.css"/>
+
+    </head>
+    <body>
+   <div class="container">
+    <div class='row'>
+        <div class='col-sm-5 forms'>  
+            <form action="result" method="post">
+                Your Name:<input type="text"  name="name" class="form-control"/>
+                Dojo Location:<select name = "dojo_location" class="form-control">
+                    <option value="chicago">Chicago</option>
+                    <option value="los_angeles">Los Angeles</option>
+                    <option value="Dallas">Dallas</option>
+                    <option value="Seattle">Seattle</option> 
+                </select>
+                Favorite Languages:<select name = "favorite_languages" class="form-control">
+                    <option value="c#">C#</option>
+                    <option value="python">Python</option>
+                    <option value="javascript">Javascript</option>
+                    <option value="mean">Mean</option>
+                    </select>
+                Comment(optional):<input type="textarea" name = "comments" class="form-control"/>
+                <input type="submit" name="submit" value = 'submit'>   
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<h3>{{travel.destnation}}</h3>
+<p>Planned by: {{travel.travel_created_by.first_name}}</p>
+<p>Travel Date From: {{travel.travel_start_date}}</p>
+<p>Travel Date To: {{travel.travel_end_date}}</p>
+
+<h4>Other users joining the trip:</h4>
+<ul>
+    {% for user in travel.favorite_travels.all %}
+    <li>{{user.first_name}}</li>
+    {% endfor %}
+</ul>
+
+<a href="{% url 'travels:index' %}">Home</a>
+<a href="/">Logout</a>
+

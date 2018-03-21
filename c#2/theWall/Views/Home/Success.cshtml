@@ -1,0 +1,29 @@
+<div class="container">
+    <div class='row'>
+        <div class='col-sm-5 forms'>
+           <form action="addmessage" method="post">                
+                Post a message:<input type="textarea"  name="message" class="form-control"/> <br/> 
+                <div class='form-group'>
+                <button type="submit">Post a message</button>
+                </div>                       
+            </form>
+            @foreach(var message in @ViewBag.allmessages)
+            {
+                <h4>"@message["message"]"</h4>
+                // <p>@message["firstName"], Created at @message["created_at"].ToString("D")</p>
+                 <div class='col-sm-5 forms'>
+                    <form action="addcomment" method="post"> 
+                     <div class='form-group'>              
+                        Post a comment:<input type="textarea" name = "comment" class="form-control"/><br/>
+                     </div>   
+                        <div class='form-group'>
+                        <button type="submit">Post a comment</button>
+                        </div>                       
+                    </form>
+                    <hr>
+                 </div>
+            }
+           
+        </div>    
+    </div>
+</div>

@@ -1,0 +1,21 @@
+<h1>Add a Trip</h1>
+{% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+        {% endfor %}
+    </ul>
+{% endif %}
+<form action="{% url 'travels:process_add' %}" method='POST'> 
+    {% csrf_token %}
+    <ul>
+        Destination: <input type="text" name= "destination">
+        Description: <input type="textarea" name="description">
+        Travel Date From: <input type="date" name="date_from">
+        Travel Date To: <input type="date" name="date_to">
+        
+        <input type="submit" value="Add"> 
+    </ul>
+</form> 
+<a href="{% url 'travels:index' %}">Home</a>
+<a href="/">Logout</a>

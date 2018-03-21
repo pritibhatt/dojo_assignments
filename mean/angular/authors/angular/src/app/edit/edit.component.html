@@ -1,0 +1,13 @@
+<a [routerLink]="['/']">Home</a>
+<div  class="from-group">
+  <form  (submit)="onSubmitEdit()">
+    <!-- call name as something else other than ngmodel name -->
+    <input type="hidden" name="id" [(ngModel)]="updatedAuthor.author._id"  > 
+    Name:<input type="text" name="name" [(ngModel)]="updatedAuthor.author.name"  > 
+   
+    <input type="submit" class="btn btn-primary" value="Submit" />
+    <input type="button" [routerLink]="['']" class="btn btn-primary" value="Cancel" />
+     
+  </form>
+</div>
+

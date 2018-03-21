@@ -1,0 +1,1 @@
+You can open database either File>>open SQL Scripts if it is new script or type in the Schemas section to search for existing. Once you have the file double click on the database you want or type in script USE name_of_database you want.

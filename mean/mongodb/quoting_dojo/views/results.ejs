@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+
+    <title></title>
+</head>
+<body>
+    <div class='col-sm-5 forms'>
+        <h1>Here are some awesome quotes!</h1>
+        <% if(typeof(errors) != 'undefined' ) { %>
+            <% for (var x in errors) { %>
+             <h3><%= errors[x].message %></h3>
+            <% } %>
+        <% } %>
+        <% for (var quote in all_quotes) { %>
+            <div class="row justify-content-left"><p>"<%= all_quotes[quote].quote %>"</p></div>
+            <div class="form-horizontal">
+                <p><%= all_quotes[quote].name %> at <%= all_quotes[quote].createdAt %></p>
+            
+                
+            </div>
+            <hr>
+        <%  } %>  
+    </div> 
+
+</body>
+</html>
