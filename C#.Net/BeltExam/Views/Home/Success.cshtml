@@ -1,0 +1,68 @@
+@model BeltExam.Models.Idea
+
+<h1>Hi @ViewBag.findUserInfo.Name </h1>
+
+<div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <div>
+                    <p> <a href="/Logout">Logout</a></p> 
+                </div>
+
+                <form asp-controller="Home" asp-action="CreateIdea" method="post">
+                    <div class="form-group">
+                        <span asp-validation-for="NewIdea"></span>
+                        <input  class="form-control" asp-for="NewIdea" placeholder="Post something here..."/>
+                    </div>
+                   
+                    
+                    <button type="submit" class="btn btn-default">Create</button><br><br>
+                </form>
+                
+            </div>
+    </div>     
+     
+                    
+         
+       
+@foreach(var idea in ViewBag.allIdeaInfo)
+{
+     <blockquote>
+     <p><a href="UserInfo/@idea.IdeaId"> @idea.User.Alias</a> says:</p>
+     <p>  @idea.NewIdea</p> 
+     <p><a href="OneIdea/@idea.IdeaId">@idea.Like.Count people</a>&nbsp like this </p>
+     <p>
+    @{bool foundLike = false;}
+       
+        @foreach(var likes in @idea.Like)
+        {
+           
+            @if(@likes.UserId ==@ViewBag.userInfo)
+           {
+            
+               foundLike=true;
+               break;
+           }
+      
+         
+        }   
+        @if(foundLike ==false)
+        {
+           <h4><a href="Like/@idea.IdeaId">Like</a></h4> 
+
+        }  
+                        
+                 
+        @if(idea.UserId == ViewBag.userInfo)
+        {
+            <h4><a href="Delete/@idea.IdeaId">Delete</a></h4>
+            
+        }      
+                
+            
+       </p>
+     </blockquote>  
+   
+}
+            
+         

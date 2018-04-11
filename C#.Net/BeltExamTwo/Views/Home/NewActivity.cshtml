@@ -1,0 +1,45 @@
+@model BeltExamTwo.Models.Activity
+ 
+ <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                
+                <h2>Dojo Activity Center</h2>
+                <div>
+                    <p><a href="/Logout">Log off</a>
+                     &nbsp &nbsp<a href="/success" >Home</a>
+                    </p> 
+                </div>
+                <hr>
+                <form asp-controller="Home" asp-action="CreateActivity" method="post">
+                    <div class="form-group">
+                        <span asp-validation-for="ActivityName"></span>
+                        <input  class="form-control" asp-for="ActivityName" placeholder="Activity Name"/>
+                    </div>
+                    <div class="form-group">
+                        <span asp-validation-for="Time"></span>
+                       Time:<input type="time" class="form-control" asp-for="Time"/>
+                    </div>
+                    <div class="form-group">
+                        <span asp-validation-for="Date"></span>
+                        Date:<input type="date" class="form-control" asp-for="Date" />
+                    </div>
+                    <div class="form-group">
+                        <span asp-validation-for="Duration"></span>
+                        Duration:<input  class="form-control" asp-for="Duration"/>
+                        <span asp-validation-for="DescriptionTwo"></span>
+                        <select class="form-control" asp-for="DescriptionTwo" >
+                            <option value="Days">Days</option>
+                            <option value="Hours">Hours</option>
+                            <option value="Minutes">Minutes</option>    
+                        </select>                    
+                    </div>
+                    <div class="form-group">
+                        <span asp-validation-for="Description"></span>
+                        Description:<input  class="form-control" asp-for="Description" />
+                    </div>
+                    <button type="submit" class="btn btn-default">Create</button><br><br>
+                </form>
+                
+            </div>
+    </div>

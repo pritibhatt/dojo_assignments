@@ -1,0 +1,80 @@
+@model BeltExamTwo.Models.Activity
+
+<head>
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 60%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+</head>
+<h1>Dojo Activity Center &nbsp &nbsp Welcome @ViewBag.findUserInfo.FirstName    </h1>
+<a href="/Logout">Log off</a>
+<hr>
+
+<table>
+  <tr>
+    <th>Activity</th>
+    <th>Date and Time</th>
+    <th>Duration</th>
+    <th>Event Coordinator</th>
+    <th>Number of Participants</th>
+    <th>Actions</th>
+  </tr>
+@foreach(var activity in ViewBag.AllActivityInfo)
+{
+    bool foundJoin = false;
+    <tr>
+        <td><a href="Oneactivity/@activity.ActivityId"> @activity.ActivityName</a></td>
+        <td>@activity.Date.ToString("MM/dd/yyyy") at @activity.Time.ToString("hh:sstt")</td>
+        <td>@activity.Duration @activity.DescriptionTwo</td>
+        <td>@activity.User.FirstName</td>
+        <td>@activity.Join.Count</td>
+        <td>
+       
+        @foreach(var participant in @activity.Join)
+        {
+            @if(@participant.UserId ==@ViewBag.userInfo)
+           {
+               foundJoin=true;
+               <a href="UnJoin/@activity.ActivityId">Leave</a>
+               break;
+           }
+      
+         
+        }   
+        @if(foundJoin ==false)
+        {
+            <a href="Join/@activity.ActivityId">Join</a>  
+
+        }
+            
+        
+               
+                 
+        @if(activity.UserId == ViewBag.userInfo)
+        {
+            <a href="Delete/@activity.ActivityId">Delete</a>
+            
+        }      
+                
+            
+        
+        </td>
+    </tr>     
+        
+}
+
+
+<a href="/newactivity"><button class="btn btn-primary">Add New Activity</button></a>

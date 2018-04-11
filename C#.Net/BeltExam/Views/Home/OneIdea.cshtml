@@ -1,0 +1,33 @@
+@model BeltExam.Models.Like
+
+
+
+<p> <a href="/Logout">Logout</a>
+    &nbsp &nbsp<a href="/success" >Bright Ideas</a>
+</p> 
+
+
+@foreach (var idea in @ViewBag.AllLikes)
+{
+   
+   <blockquote>
+        <h4>@idea.User.Alias says:</h4>
+        <h4>@idea.NewIdea</h4>
+   </blockquote>
+}
+
+
+<br>
+
+<br>
+<p>People who liked this post</p>
+@foreach (var ideatwo in @ViewBag.AllLikes)
+{
+    @foreach (var like in ideatwo.Like)
+    {
+        <blockquote>
+            <h4>@like.User.Alias @like.User.Name</h4>
+        </blockquote>
+    }
+    
+}

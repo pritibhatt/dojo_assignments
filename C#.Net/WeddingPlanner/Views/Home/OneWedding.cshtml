@@ -1,0 +1,25 @@
+@model WeddingPlanner.Models.RSVP
+
+
+<h1> @ViewBag.oneWedding.WedderOne & @ViewBag.oneWedding.WedderTwo Wedding </h1>
+<p> <a href="/Logout">Logout</a>
+    &nbsp &nbsp<a href="/success" >Dashboard</a>
+</p> 
+<h3>Date: <span class="thicc">@ViewBag.oneWedding.Date.ToString("D")</span></h3>
+<h3>Address: <span class="thicc">@ViewBag.oneWedding.WeddingAddress</span></h3>
+<hr>
+<h3>Guests:</h3>
+@foreach (var wedding in @ViewBag.AllGuests)
+{
+    @foreach (var guest in wedding.RSVP)
+    {
+        <blockquote>
+            <h4>@guest.User.FirstName @guest.User.LastName</h4>
+        </blockquote>
+    }
+}
+<br>
+
+<br>
+
+   

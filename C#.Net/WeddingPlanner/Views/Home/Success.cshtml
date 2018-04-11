@@ -1,0 +1,90 @@
+@model WeddingPlanner.Models.Wedding
+
+<head>
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 50%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+</head>
+<h1>Welcome to Wedding Planner</h1>
+<a href="/Logout">Logout</a>
+
+
+<table>
+  <tr>
+    <th>Wedding</th>
+    <th>Date</th>
+    <th>Guest</th>
+    <th>Action</th>
+  </tr>
+@foreach(var wedding in ViewBag.WeddingInfo)
+{
+    bool foundRSVP = false;
+    <tr>
+        <td><a href="OneWedding/@wedding.WeddingId"> @wedding.WedderOne & @wedding.WedderTwo</a></td>
+        <td>@wedding.Date</td>
+        <td>@wedding.RSVP.Count</td>
+        <td>
+       
+        @foreach(var guest in @wedding.RSVP)
+        {
+            @if(@guest.UserId ==@ViewBag.userInfo)
+           {
+               foundRSVP=true;
+               <a href="UnRSVP/@wedding.WeddingId">UN-RSVP</a>
+               break;
+           }
+      
+         
+        }   
+        @if(foundRSVP ==false)
+        {
+            <a href="RSVP/@wedding.WeddingId">RSVP</a>  
+
+        }
+            
+            
+        
+       
+                
+        
+        
+
+         
+            
+        
+                    
+                
+               
+                 
+             @if(wedding.UserId == ViewBag.userInfo)
+            {
+                <a href="Delete/@wedding.WeddingId">Delete</a>
+               
+            }      
+                
+            
+        
+        </td>
+    </tr>
+                    
+        
+                
+       
+   
+}
+
+<a href="/newwedding">New Wedding</a>

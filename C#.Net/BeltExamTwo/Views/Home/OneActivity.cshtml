@@ -1,0 +1,53 @@
+@model BeltExamTwo.Models.Join
+
+
+
+<p> <a href="/Logout">Log off</a>
+    &nbsp &nbsp<a href="/success" >Home</a>
+</p> 
+
+@{bool foundJoin = false;}
+@foreach (var activity in @ViewBag.Joins)
+{
+   
+   <blockquote>
+        <h4>@activity.ActivityName    &nbsp &nbsp &nbsp &nbsp
+        @foreach(var participant in @activity.Join)
+        {
+            
+            @if(@participant.UserId ==@ViewBag.userInfo)
+           {
+             
+               foundJoin=true;
+               <a href="/UnJoin/@activity.ActivityId"><button class="btn btn-primary">Leave</button></a>
+               break;
+            
+           }
+      
+         
+        }   
+        @if(foundJoin ==false)
+        {
+            <a href="/Join/@activity.ActivityId"><button class="btn btn-primary">Join</button></a>  
+
+        }
+         @if(activity.UserId == ViewBag.userInfo)
+        {
+            <a href="/Delete/@activity.ActivityId"><button class="btn btn-primary">Delete</button></a>
+            
+        }      
+        </h4><br>
+        <h4>Event Coordinator: @activity.User.FirstName</h4>
+        <br>
+        
+        <h4>Description: @activity.Description</h4><br>
+        <h4>Paticipants:</h4>
+
+        @foreach (var join in @activity.Join)
+    {
+        
+            <h4>@join.User.FirstName </h4>
+       
+    }  
+    </blockquote> 
+}

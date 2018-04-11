@@ -1,0 +1,58 @@
+@model BeltExam.Models.User
+
+
+<h1> </h1>
+<p> <a href="/Logout">Logout</a>
+    &nbsp &nbsp<a href="/success" >Bright Ideas</a>
+</p> 
+@{
+int Totalcount = 0;
+int TotalLiked = 0;     
+
+
+@foreach (var idea  in @ViewBag.SecondAllLikes)
+
+{
+
+   
+        <blockquote>
+        <p>Name: @idea.User.Name</p>
+        <p>Alias: @idea.User.Alias</p>
+        <p>Email: @idea.User.Email</p>
+         
+        </blockquote>
+         <hr>   
+        
+    @foreach(var like in @ViewBag.Countlikes)
+    {    
+    
+            @if(@like.UserId== @idea.User.UserId)
+            {
+                
+                Totalcount++;
+                
+            }
+            @foreach(var totallikes in @like.Like)
+            {
+                @if(@totallikes.UserId== @idea.User.UserId)
+                {
+                    TotalLiked++;
+                }
+            }
+          
+        
+    }
+    <p>Total number of Posts: @Totalcount </p>  
+    <p>Total number of Likes: @TotalLiked</p>
+}       
+
+
+        
+
+
+     
+}     
+
+ 
+          
+
